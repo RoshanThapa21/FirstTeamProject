@@ -11,6 +11,7 @@ import com.rm.SpringBootRest.model.Employee;
 import com.rm.SpringBootRest.service.EmployeeService;
 
 @RestController("/")
+@RequestMapping("/api")
 public class EmployeeController {
 	
 	@Autowired
@@ -20,8 +21,6 @@ public class EmployeeController {
 		public List<Employee> save(@RequestBody List<Employee> emp){
 			return employeeService.save(emp);
 		
-		
 	}
-	
     
 }
